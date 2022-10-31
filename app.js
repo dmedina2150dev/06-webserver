@@ -16,7 +16,7 @@ hbs.registerPartials(__dirname + '/views/partials', function (err) { console.log
 app.use( express.static('public') ); // TODO Asi se usan los middelware de node
 
 // TODO Renderizar desde el servidor
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.render('home', {
         nombre: 'Dajan Medina',
         titulo: 'Curso de Node'
@@ -29,7 +29,7 @@ app.get('/generic', (req, res) => {
 });
 app.get('/elements', (req, res) => {
     res.render('elements', { titulo: 'Curso de Node' });
-});
+});*/
 
 
 // Como pasa por el middleware anterior esta no se ejecuta
@@ -53,7 +53,7 @@ app.get('/hola-mundo', (req, res) => {
 // TODO Comodin para capturar rutas no existentes
 app.get('*', (req, res) => {
     // res.send('404 | Page not Found');
-    res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/index .html');
 });
 
 app.listen( port, () => {
